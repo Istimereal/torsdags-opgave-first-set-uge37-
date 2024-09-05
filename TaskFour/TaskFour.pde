@@ -51,14 +51,6 @@ void draw(){
   
   sumDivision--;
   println(sumDivision);
-  
-  
-  
-  
-  
-  
-  
-   
 }
 
 

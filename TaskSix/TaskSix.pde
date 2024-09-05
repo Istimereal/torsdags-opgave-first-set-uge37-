@@ -6,8 +6,8 @@ int numberOfCircles;
 int circleSize;
 int x;
 int y;
-int counter;
-int rowCounter;
+int counter = 0;
+int rowCounter = 0;
 int red;
 int green;
 int blue;
@@ -42,13 +42,25 @@ void draw(){
   counter =  frameCount % numberOfCircles == 0 ? 0 : counter+1;
   rowCounter =  counter==0 ? rowCounter+1:rowCounter;
   
+ 
   
   // Explaining the modulus operator
   // Modulus is what is left when you divide one int with another int.
   // 1 % 3 = 1 (3 people can't share 1 apple without cutting it, so 1 apple is left)
   // 2 % 3 = 2
   // 3 % 3 = 0
+  if(counter==0){
+  red = (int) random(255);
+  green = (int) random(255);
+  blue = (int) random(255);
+  }
  
   //Add the code for 6.c here
+  fill(red, green, blue);
   
+  
+  
+  //counter == 0 ? red = (int)random(red) : red = red;
+  //fill(rowCounter  ==  rowCounter+1)  ?  fill((int)random(green)) : rowCounter;
+  //fill(rowCounter  ==  rowCounter+1)  ?  fill((int)random(blue)) : rowCounter;
 }
